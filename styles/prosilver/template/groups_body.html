@@ -1,0 +1,39 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_GROUP_TITLE}</h2>
+
+<p>{L_GROUPS_TEXT}</p>
+
+<!-- BEGIN groups -->
+<br />
+<div style="border: solid #{groups.GROUP_COLOUR}; padding: 1px 1px 0 3px; font-size: 11px;" class="round">
+
+	<div class="left" style="padding: 3px 0 0 3px; font-size: 11px;">
+		<h2 style="margin-top: 0;"><a href="{groups.U_VIEW_GROUP}" style="color: #{groups.GROUP_COLOUR}; text-decoration: none;" title="{groups.GROUP_NAME}">{groups.GROUP_NAME}</a></h2>
+		<p style="float: left; width: 49%; font-size: 11px;">
+				<!-- IF groups.S_SHOW_RANK_IMG -->{groups.RANK_IMG}<!-- ENDIF -->
+				<!-- IF groups.S_SHOW_GROUP_RANK -->{groups.GROUP_RANK}<br /><!-- ENDIF -->
+				<!-- IF groups.S_SHOW_GROUP_DESC --><br />{groups.GROUP_DESC}<br /><!-- ENDIF -->
+		</p>
+	</div>
+
+	<div style="float:right; width: 49%; font-size: 11px;">
+		<!-- BEGIN leaders -->
+			<a style="display: block; border-bottom: 1px dotted #{groups.GROUP_COLOUR}; padding: 3px;" href="{groups.leaders.U_VIEW_PROFILE}" title="View Profile"><strong>&raquo;</strong> <strong style="color: #{groups.GROUP_COLOUR};">{groups.leaders.USERNAME}</strong></a>
+		<!-- BEGINELSE -->
+			<span style="display: block;">{L_NO_LEADERS}</span>	
+		<!-- END leaders -->
+				
+		<!-- BEGIN members -->
+			<a style="display: block; border-bottom: 1px dotted #{groups.GROUP_COLOUR}; padding: 3px;" href="{groups.members.U_VIEW_PROFILE}" title="View Profile"><span style="color: #{groups.GROUP_COLOUR};">{groups.members.USERNAME}</span></a>			
+		<!-- BEGINELSE -->
+			<span style="display: block;">{L_NO_MEMBERS}</span>	
+		<!-- END members -->		
+	</div>
+
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<br /> 
+<!-- END groups -->
+
+<!-- INCLUDE overall_footer.html -->
