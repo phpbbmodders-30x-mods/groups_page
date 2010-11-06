@@ -4,7 +4,7 @@
 * groups [English]
 *
 * @package language
-* @version $Id: groups.php 0003 22/11/2008 01:16 kenny $
+* @version $Id: groups.php 06/11/2010 RMcGirr83
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -36,8 +36,8 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'GROUP_TITLE'		=> 'Groups/Contributers',
-	'GROUPS_TEXT'		=> 'These are a few of the groups set up on this website, mostly supporters and helpers. We would not be here today if it wasn\'t for their help',
+	'GROUP_TITLE'		=> 'Groups',
+	'GROUPS_TEXT'		=> 'A list of groups that we have on this forum.',
 	'NO_LEADERS'		=> 'This group does not have a leader assigned.',
 	'NO_MEMBERS'		=> 'There are currently no members in this group.',
 ));

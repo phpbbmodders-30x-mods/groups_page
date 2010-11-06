@@ -49,7 +49,7 @@
 				<action type="before-add"><![CDATA[					<li class="icon-members"><a href="{U_GROUPS}" title="{L_GROUPS}">{L_GROUPS}</a></li>]]></action>
 			</edit>
 		</open>
-<diy-instructions lang="en"><![CDATA[*** NOTE: If you are installing via Automod you may skip to step 3 ***
+<diy-instructions lang="en"><![CDATA[*** NOTE: If you are installing via Automod you may skip to step 2 ***
 1. Make all edits to all files and upload them to your forum.    
 2. Refresh the prosilver style.  
 3. Enjoy the Mod!!

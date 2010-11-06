@@ -1,34 +1,64 @@
 <!-- INCLUDE overall_header.html -->
-
+<style type="text/css">
+.group-colour {
+	color: #0076b1;
+}
+.group-outline {
+	border: solid #0076b1;
+	padding: 1px 1px 0 3px;
+	font-size: 11px;
+}
+.group-left {
+	padding: 3px 0 0 3px;
+	text-decoration: none;
+}
+.group-rank {
+	float: left;
+	width: 49%;
+}
+.group-right {
+	float:right; 
+	width: 49%;
+}
+.group-members {
+	display: block;
+	padding-top: 3px;
+	padding-left: 10px;
+}
+.group-leaders {
+	display: block;
+	border-bottom: 1px dotted #0076b1;
+	padding-top: 3px;
+}
+</style>
 <h2>{L_GROUP_TITLE}</h2>
 
 <p>{L_GROUPS_TEXT}</p>
 
 <!-- BEGIN groups -->
 <br />
-<div style="border: solid #{groups.GROUP_COLOUR}; padding: 1px 1px 0 3px; font-size: 11px;" class="round">
+<div class="group-outline"<!-- IF groups.GROUP_COLOUR --> style="border: solid #{groups.GROUP_COLOUR};"<!-- ENDIF -->>
 
-	<div class="left" style="padding: 3px 0 0 3px; font-size: 11px;">
-		<h2 style="margin-top: 0;"><a href="{groups.U_VIEW_GROUP}" style="color: #{groups.GROUP_COLOUR}; text-decoration: none;" title="{groups.GROUP_NAME}">{groups.GROUP_NAME}</a></h2>
-		<p style="float: left; width: 49%; font-size: 11px;">
-				<!-- IF groups.S_SHOW_RANK_IMG -->{groups.RANK_IMG}<!-- ENDIF -->
-				<!-- IF groups.S_SHOW_GROUP_RANK -->{groups.GROUP_RANK}<br /><!-- ENDIF -->
-				<!-- IF groups.S_SHOW_GROUP_DESC --><br />{groups.GROUP_DESC}<br /><!-- ENDIF -->
+	<div class="group-left">
+		<h2 style="margin-top: 0;"><a href="{groups.U_VIEW_GROUP}" style="<!-- IF groups.GROUP_COLOUR --> color: #{groups.GROUP_COLOUR};<!-- ENDIF -->" title="{groups.GROUP_NAME}">{groups.GROUP_NAME}</a></h2>
+		<p class="group-rank">
+				{groups.RANK_IMG}
+				{groups.GROUP_RANK}<br />
+				{groups.GROUP_DESC}
 		</p>
 	</div>
 
-	<div style="float:right; width: 49%; font-size: 11px;">
+	<div class="group-right">
 		<!-- BEGIN leaders -->
-			<a style="display: block; border-bottom: 1px dotted #{groups.GROUP_COLOUR}; padding: 3px;" href="{groups.leaders.U_VIEW_PROFILE}" title="View Profile"><strong>&raquo;</strong> <strong style="color: #{groups.GROUP_COLOUR};">{groups.leaders.USERNAME}</strong></a>
+			<span class="group-leaders"<!-- IF groups.GROUP_COLOR --> style="border-bottom: 1px dotted #{groups.GROUP_COLOUR};"<!-- ENDIF -->><strong>&raquo;</strong> {groups.leaders.U_VIEW_PROFILE}</strong></span>
 		<!-- BEGINELSE -->
-			<span style="display: block;">{L_NO_LEADERS}</span>	
-		<!-- END leaders -->
-				
+			<span class="group-leaders"<!-- IF groups.GROUP_COLOR --> style="border-bottom: 1px dotted #{groups.GROUP_COLOUR};"<!-- ENDIF -->>{L_NO_LEADERS}</span>
+		<!-- END leaders -->			
 		<!-- BEGIN members -->
-			<a style="display: block; border-bottom: 1px dotted #{groups.GROUP_COLOUR}; padding: 3px;" href="{groups.members.U_VIEW_PROFILE}" title="View Profile"><span style="color: #{groups.GROUP_COLOUR};">{groups.members.USERNAME}</span></a>			
+			<span class="group-members">{groups.members.U_VIEW_PROFILE}</span>		
 		<!-- BEGINELSE -->
-			<span style="display: block;">{L_NO_MEMBERS}</span>	
-		<!-- END members -->		
+			<span class="group-members">{L_NO_MEMBERS}</span>
+		<!-- END members -->
 	</div>
 
 	<div style="clear: both;">&nbsp;</div>
