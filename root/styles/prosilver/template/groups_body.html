@@ -27,8 +27,6 @@
 }
 .group-leaders {
 	display: block;
-	border-bottom: 1px dotted #0076b1;
-	padding-top: 3px;
 }
 </style>
 <h2>{L_GROUP_TITLE}</h2>
@@ -50,9 +48,9 @@
 
 	<div class="group-right">
 		<!-- BEGIN leaders -->
-			<span class="group-leaders"<!-- IF groups.GROUP_COLOR --> style="border-bottom: 1px dotted #{groups.GROUP_COLOUR};"<!-- ENDIF -->><strong>&raquo;</strong> {groups.leaders.U_VIEW_PROFILE}</strong></span>
+			<span class="group-leaders"<!-- IF groups.leaders.S_LAST_ROW --> style="border-bottom: 1px dotted <!-- IF groups.GROUP_COLOUR -->#{groups.GROUP_COLOUR}<!-- ENDIF -->;"<!-- ENDIF -->><strong>&raquo;</strong> {groups.leaders.U_VIEW_PROFILE}</strong></span>
 		<!-- BEGINELSE -->
-			<span class="group-leaders"<!-- IF groups.GROUP_COLOR --> style="border-bottom: 1px dotted #{groups.GROUP_COLOUR};"<!-- ENDIF -->>{L_NO_LEADERS}</span>
+			<span class="group-leaders" style="border-bottom: 1px dotted <!-- IF groups.GROUP_COLOUR -->#{groups.GROUP_COLOUR}<!-- ENDIF -->;">{L_NO_LEADERS}</span>
 		<!-- END leaders -->			
 		<!-- BEGIN members -->
 			<span class="group-members">{groups.members.U_VIEW_PROFILE}</span>		
