@@ -10,9 +10,29 @@
 				Thanks and enjoy the mod!!</author-notes>				
 		<author-group>
 			<author>
-				<realname>Rich McGirr</realname>
-				<username>RMcGirr83</username>
-				<homepage>http://rmcgirr83.org</homepage>
+				<realname><![CDATA[Rich McGirr]]></realname>
+				<username><![CDATA[RMcGirr83]]></username>
+				<homepage><![CDATA[http://rmcgirr83.org]]></homepage>
+				<contributions-group>
+					<contributions status="current" from="2010-10-27" position="Developer"/>
+				</contributions-group>				
+			</author>
+			<author>
+				<realname><![CDATA[Jari Kanerva]]></realname>
+				<username><![CDATA[tumba25]]></username>
+				<homepage><![CDATA[http://phpbbmodders.net/]]></homepage>
+				<email><![CDATA[info@phpbbmodders.net]]></email>
+				<contributions-group>
+					<contributions status="current" from="2010-10-27" position="Developer"/>
+				</contributions-group>
+			</author>
+			<author>
+				<realname><![CDATA[Kenny Cameron]]></realname>
+				<username><![CDATA[cherokee red]]></username>
+				<homepage><![CDATA[http://phpbbmodders.net/]]></homepage>
+				<contributions-group>
+					<contributions status="past" from="2009-10-01" to="2010-10-27" position="Developer"/>
+				</contributions-group>
 			</author>			
 		</author-group>
 		<mod-version>1.0.0</mod-version>
@@ -49,9 +69,15 @@
 				<action type="before-add"><![CDATA[					<li class="icon-members"><a href="{U_GROUPS}" title="{L_GROUPS}">{L_GROUPS}</a></li>]]></action>
 			</edit>
 		</open>
+		<open src="styles/prosilver/theme/stylesheet.css">
+			<edit>
+				<find><![CDATA[@import url("colours.css");]]></find>
+				<action type="after-add"><![CDATA[@import url("groups.css");]]></action>
+			</edit>
+		</open>		
 <diy-instructions lang="en"><![CDATA[*** NOTE: If you are installing via Automod you may skip to step 2 ***
 1. Make all edits to all files and upload them to your forum.    
-2. Refresh the prosilver style.  
+2. Refresh the prosilver style template and theme.  
 3. Enjoy the Mod!!
 ]]></diy-instructions>
 </action-group>

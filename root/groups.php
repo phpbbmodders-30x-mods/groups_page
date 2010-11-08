@@ -36,7 +36,7 @@ $db->sql_freeresult($result);
 // you can add to the array if wanted
 // by adding the group name to ignore into the array
 // default group names are GUESTS REGISTERED REGISTERED_COPPA GLOBAL_MODERATORS ADMINISTRATORS BOTS
-$groups_not_display = array('GUESTS', 'BOTS');
+$groups_not_display = array('GUESTS', 'BOTS', 'TESTING');
 
 // don't want coppa group?
 if (!$config['coppa_enable'])
